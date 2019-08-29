@@ -1,3 +1,3 @@
 ﻿# Github Label Prediction with ML
 
- ![Screenshot (80)](https://user-images.githubusercontent.com/31169310/63959974-0abeb700-caab-11e9-80ed-56a72f0264ca.png)
+![FireShot Capture 017 - Index - GithubLabelMl - localhost](https://user-images.githubusercontent.com/31169310/63962113-efa27600-caaf-11e9-881c-256098a33514.png)
