@@ -21,7 +21,7 @@ namespace GithubLabelMl.Models
 
             MLContext mlContext = new MLContext();
 
-            ITransformer mlModel = mlContext.Model.Load(@"H:\c-sharp\GithubLabelMl\GithubLabelMlML.Model\MLModel.zip", out var modelInputSchema);
+            ITransformer mlModel = mlContext.Model.Load(@"..\GithubLabelMlML.Model\MLModel.zip", out var modelInputSchema);
             var predEngine = mlContext.Model.CreatePredictionEngine<ModelInput, ModelOutput>(mlModel);
             // Use the code below to add input data
             var input = new ModelInput();
