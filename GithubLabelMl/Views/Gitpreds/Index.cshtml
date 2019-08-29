@@ -1,0 +1,34 @@
+﻿@model IEnumerable<GithubLabelMl.Models.Gitpred>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1 class="text-center">GitHub Label Prediction</h1>
+<br />
+<p>
+    <a class="btn btn-primary" asp-action="Create">Create New Github Issues</a>
+</p>
+
+@foreach (var item in Model)
+{
+    <div class="card" style="width: auto;">
+
+        <div class="card-body">
+            <h5 class="card-title"><strong>@Html.DisplayNameFor(model => model.Title)</strong> <br /> @Html.DisplayFor(modelItem => item.Title)</h5>
+            <p class="card-text"><strong>@Html.DisplayNameFor(model => model.Description)</strong> <br /> @Html.DisplayFor(modelItem => item.Description)</p>
+            <p class="card-text"><strong>@Html.DisplayNameFor(model => model.Area)</strong><br /> @Html.DisplayFor(modelItem => item.Area)</p>
+            <section class="container text-info text-justify bg-dark">
+                <p class="text-danger">Predicted value - </p> <p class="container box-shadow shadow-lg text-lg-center p-5">  @item.TestIt() </p>
+
+            </section>
+        </div>
+        <div class="container">
+            <a class="btn btn-info" asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+            <a class="btn btn-secondary" asp-action="Details" asp-route-id="@item.Id">Details</a> |
+            <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            <br />
+        </div>
+    </div>
+    <hr />
+}
